@@ -22,7 +22,15 @@ const ProfileImage = styled.img`
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
+  
+  &.profile-image {
+    /* Increase specificity by adding a class */
+    margin-top: 20px; /* Adjust this value as needed */
+    width: 200px; /* Set an initial width */
+    height: 200px; /* Set an initial height */
+  }
 `;
+
 
 const Container = styled.div`
   display: flex;
@@ -108,7 +116,7 @@ const ThreeAnimation = () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     const geometry = new THREE.TorusGeometry(20, 3, 16, 100);
-    const material = new THREE.MeshStandardMaterial({ color: 0xff6347 });
+    const material = new THREE.MeshStandardMaterial({ color: 0x04364A });
     const torus = new THREE.Mesh(geometry, material);
 
     scene.add(torus);
@@ -187,7 +195,7 @@ export default function Home() {
       <Container>
         <ThreeAnimation />
         <Content>
-          <ProfileImage src="/inbar.jpg" alt="Inbar Gluska" />
+        <ProfileImage src="/inbar.jpg" alt="Inbar Gluska" className="profile-image" />
           <Header>Hi there! 👋 I'm Inbar Gluska</Header>
           <Paragraph>
             After many years of experience in Human Resources ranging from recruitment to employee management, I'm very
