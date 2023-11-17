@@ -2,4 +2,6 @@ main {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   position: absolute;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
