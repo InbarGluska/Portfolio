@@ -2,14 +2,14 @@ import React, { useEffect, useRef } from 'react';
 import Head from 'next/head';
 import styled, { createGlobalStyle } from 'styled-components';
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import App from './App';
 
 const GlobalStyle = createGlobalStyle`
-  main {
+  body {
     margin: 0;
     font-family: "Montserrat", sans-serif;
     position: absolute;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
   }
 `;
 
@@ -17,31 +17,25 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150vh;
+  min-height: 100vh; /* Use vh for full viewport height */
   position: relative;
+  background-color: white; /* White background for the content container */
 `;
 
 const Content = styled.div`
-  // background-color: #161748; /* Purple baseline */
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
   text-align: left;
   max-width: 600px;
   width: 100%;
-  z-index: 1; /* Ensure content is above the background */
-`;
-
-const BackgroundCanvas = styled.canvas`
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  background-color: white;
+  z-index: 1;
 `;
 
 const Header = styled.h1`
   font-size: 36px;
-  color: #f95d9b; /* Pink highlight */
+  color: #f95d9b;
   margin-bottom: 20px;
 `;
 
@@ -55,7 +49,7 @@ const TechStack = styled.div`
   font-size: 16px;
   margin-top: 20px;
   font-weight: bold;
-  color: #ffffff; /* White text on purple background */
+  color: #333; /* Darker text color for readability */
 `;
 
 const GoalsList = styled.ul`
@@ -72,15 +66,22 @@ const GoalItem = styled.li`
 const ContactInfo = styled.div`
   font-size: 16px;
   margin-top: 20px;
-  color: #39a0ca; /* Bluewater lowlight */
+  color: #333;
 `;
 
 const ProjectLink = styled.a`
-  color: #f95d9b; /* Pink highlight */
+  color: #f95d9b;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
   }
+`;
+
+const ThreeCanvas = styled.canvas`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 `;
 
 const ThreeAnimation = () => {
@@ -93,19 +94,27 @@ const ThreeAnimation = () => {
       canvas: canvasRef.current,
     });
 
+    renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setSize(window.innerWidth, window.innerHeight);
+camera.position.setZ(30);
+camera.position.setX(-3);
+
+renderer.render(scene, camera);
     // Set canvas size to window size
     renderer.setSize(window.innerWidth, window.innerHeight);
 
-    const geometry = new THREE.TorusGeometry(20, 3, 16, 100);
-    const material = new THREE.MeshStandardMaterial({ color: 0x04364A });
+    const geometry = new THREE.TorusGeometry(8, 2, 16, 100);
+    const material = new THREE.MeshStandardMaterial({ color: 0xFF6529 });
     const torus = new THREE.Mesh(geometry, material);
 
     scene.add(torus);
 
     camera.position.setZ(30);
 
-    const pointLight = new THREE.PointLight(0xffffff);
+    const pointLight = new THREE.PointLight(0xffffff, 2);
     pointLight.position.set(5, 5, 5);
+    pointLight.distance = 50; 
+    pointLight.castShadow = true; 
 
     const ambientLight = new THREE.AmbientLight(0xffffff);
     scene.add(pointLight, ambientLight);
@@ -125,14 +134,27 @@ const ThreeAnimation = () => {
 
     Array(200).fill().forEach(addStar);
 
+const spaceTexture = new THREE.TextureLoader().load('space4.jpg');
+scene.background = spaceTexture;
+
+const inbarTexture = new THREE.TextureLoader().load('inbar1.jpg');
+
+const inbar = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: inbarTexture }));
+
+scene.add(inbar);
+
+inbar.position.z = -5;
+inbar.position.x = 2;
+
+
     function moveCamera() {
       const t = document.body.getBoundingClientRect().top;
       torus.rotation.x += 0.05;
       torus.rotation.y += 0.075;
       torus.rotation.z += 0.05;
     
-      // jeff.rotation.y += 0.01;
-      // jeff.rotation.z += 0.01;
+      inbar.rotation.y += 0.01;
+      inbar.rotation.z += 0.01;
     
       camera.position.z = t * -0.01;
       camera.position.x = t * -0.0002;
@@ -192,6 +214,22 @@ export default function Home() {
         <ThreeAnimation />
         <Content>
           <Header>Hi there! 👋 I'm Inbar Gluska</Header>
+          <Paragraph>
+            After many years of experience in Human Resources ranging from recruitment to employee management, I'm very
+            excited to start my journey as a Full Stack Web Developer. I am curious and eager to learn new skills and
+            ways to utilize my talents, such as integrating into teams and learning quickly. My creativity and attention
+            to detail are my strengths, and I am positive that they will be valuable assets in my tech career. I am
+            actively seeking a position in an environment where I can grow professionally and collaborate with
+            like-minded individuals.
+          </Paragraph>
+          <Paragraph>
+            After many years of experience in Human Resources ranging from recruitment to employee management, I'm very
+            excited to start my journey as a Full Stack Web Developer. I am curious and eager to learn new skills and
+            ways to utilize my talents, such as integrating into teams and learning quickly. My creativity and attention
+            to detail are my strengths, and I am positive that they will be valuable assets in my tech career. I am
+            actively seeking a position in an environment where I can grow professionally and collaborate with
+            like-minded individuals.
+          </Paragraph>
           <Paragraph>
             After many years of experience in Human Resources ranging from recruitment to employee management, I'm very
             excited to start my journey as a Full Stack Web Developer. I am curious and eager to learn new skills and
