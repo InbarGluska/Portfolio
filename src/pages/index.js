@@ -20,30 +20,34 @@ const Container = styled.div`
   align-items: center;
   min-height: 100vh; /* Use vh for full viewport height */
   position: relative;
-  background-color: white; /* White background for the content container */
+  // background-color: white; /* White background for the content container */
+  width: 90%;
+  margin: 0 auto; /* Center the section horizontally */
+  padding: 70px; /* Add padding */
 `;
 
 const Content = styled.div`
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  text-align: center; /* Center text inside Content */
   max-width: 600px;
   width: 100%;
   background-color: white;
   z-index: 1;
+  margin-top: 0px;
 `;
 
 const Header = styled.h1`
-  font-size: 36px;
-  color: #f95d9b;
-  margin-bottom: 20px;
+  font-size: 40px;
+  color: black;
+  margin-bottom: 10px;
 `;
 
 const Paragraph = styled.p`
   font-size: 18px;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 `;
 
 const TechStack = styled.div`
@@ -51,17 +55,6 @@ const TechStack = styled.div`
   margin-top: 20px;
   font-weight: bold;
   color: #333; /* Darker text color for readability */
-`;
-
-const GoalsList = styled.ul`
-  font-size: 16px;
-  margin-top: 20px;
-  list-style: none;
-  padding: 0;
-`;
-
-const GoalItem = styled.li`
-  margin-bottom: 10px;
 `;
 
 const ContactInfo = styled.div`
@@ -214,7 +207,7 @@ export default function Home() {
       <Container id="home">
         <ThreeAnimation />
         <Content>
-          <Header>Hi there! 👋 I'm Inbar Gluska</Header>
+          <Header> Inbar Gluska Full-Stack Web Developer</Header>
           <Paragraph>
             {/* Your content */}
           </Paragraph>
@@ -239,12 +232,12 @@ export default function Home() {
           {/* Other content */}
         </Content>
       </Container>
-      <Container id="goals">
+       <Container id="projects">
         <Content>
-          <Header>Goals</Header>
-          <GoalsList>
-            {/* Goals content */}
-          </GoalsList>
+          <Header>Projects</Header>
+          <ProjectLink href="https://coffee-snobs-coral.vercel.app/" target="_blank">
+            Check out my recent project
+          </ProjectLink>
           {/* Other content */}
         </Content>
       </Container>
@@ -254,15 +247,6 @@ export default function Home() {
           <ContactInfo>
             {/* Contact Info content */}
           </ContactInfo>
-          {/* Other content */}
-        </Content>
-      </Container>
-      <Container id="projects">
-        <Content>
-          <Header>Projects</Header>
-          <ProjectLink href="https://coffee-snobs-coral.vercel.app/" target="_blank">
-            Check out my recent project
-          </ProjectLink>
           {/* Other content */}
         </Content>
       </Container>
