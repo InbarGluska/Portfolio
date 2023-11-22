@@ -38,6 +38,12 @@ const Content = styled.div`
   margin-top: 0px;
 `;
 
+const Name = styled.h1`
+  font-size: 40px;
+  color: black;
+  margin-bottom: 10px;
+`;
+
 const Header = styled.h1`
   font-size: 40px;
   color: black;
@@ -97,7 +103,7 @@ renderer.render(scene, camera);
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     const geometry = new THREE.TorusGeometry(8, 2, 16, 100);
-    const material = new THREE.MeshStandardMaterial({ color: 0xFF6529 });
+    const material = new THREE.MeshStandardMaterial({ color: 0x203f5f });
     const torus = new THREE.Mesh(geometry, material);
 
     scene.add(torus);
@@ -127,7 +133,7 @@ renderer.render(scene, camera);
 
     Array(200).fill().forEach(addStar);
 
-const spaceTexture = new THREE.TextureLoader().load('space4.jpg');
+const spaceTexture = new THREE.TextureLoader().load('stars2.jpg');
 scene.background = spaceTexture;
 
 const inbarTexture = new THREE.TextureLoader().load('inbar1.jpg');
@@ -204,10 +210,15 @@ export default function Home() {
         <link rel="icon" href="/i.ico" />
       </Head>
       <Navbar />
+      <ThreeAnimation />
       <Container id="home">
-        <ThreeAnimation />
+        <Content> 
+          <Name> Inbar Gluska</Name>
+       </Content>
+      </Container> 
+      <Container id="home">
         <Content>
-          <Header> Inbar Gluska Full-Stack Web Developer</Header>
+          <Header> Full-Stack Web Developer</Header>
           <Paragraph>
             {/* Your content */}
           </Paragraph>
