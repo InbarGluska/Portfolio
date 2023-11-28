@@ -24,6 +24,8 @@ const Container = styled.div`
   width: 90%;
   margin: 0 auto; /* Center the section horizontally */
   padding: 70px; /* Add padding */
+  margin-top: -55px;
+  margin-bottom: -100px;
 `;
 
 const Content = styled.div`
@@ -36,6 +38,12 @@ const Content = styled.div`
   background-color: white;
   z-index: 1;
   margin-top: 0px;
+`;
+
+const Welcome = styled.h1`
+  font-size: 40px;
+  color: black;
+  margin-bottom: 10px;
 `;
 
 const Name = styled.h1`
@@ -214,23 +222,28 @@ export default function Home() {
       <ThreeAnimation />
       <Container id="home">
         <Content> 
-          <Name> Inbar Gluska</Name>
+          <Welcome>WELCOME</Welcome>
+          <Name> I'm Inbar Gluska</Name>
+          <Header> a Full-Stack Web Developer</Header>
        </Content>
       </Container> 
-      <Container id="home">
-        <Content>
-          <Header> Full-Stack Web Developer</Header>
-          <Paragraph>
-            {/* Your content */}
-          </Paragraph>
-          {/* Other content */}
-        </Content>
-      </Container>
       <Container id="about">
         <Content>
           <Header>About Me</Header>
           <Paragraph>
-            {/* About Me content */}
+Greetings! I'm a dedicated Full Stack Web Developer with a solid foundation in web development, coupled with a thirst for learning and innovation.
+          </Paragraph>
+          <Paragraph>
+
+
+🎓
+I graduated from a rigorous and comprehensive web development bootcamp at Spiced in August 2023. This immersive experience equipped me with extensive knowledge and hands-on expertise in various aspects of web development.
+</Paragraph>
+<Paragraph>
+
+💼 
+Currently, I'm engaged in an internship at MewMeow, contributing to their innovative Cats App. Here, I'm fully immersed in full-stack development, specializing in React Native and iOS simulator. Additionally, I've been actively exploring 3D concepts utilizing Three.js.
+
           </Paragraph>
           {/* Other content */}
         </Content>
