@@ -51,9 +51,10 @@ const Header = styled.h1`
 `;
 
 const Paragraph = styled.p`
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.6;
   margin-bottom: 0px;
+  display: block;
 `;
 
 const TechStack = styled.div`
