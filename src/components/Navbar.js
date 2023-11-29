@@ -43,6 +43,7 @@ const Navbar = () => {
       <Name>Inbar Gluska</Name>
       <div>
         <NavLink onClick={() => scrollToSection('about')}>About</NavLink>
+        <NavLink onClick={() => scrollToSection('tech-stack')}>Tech Stack</NavLink>
         <NavLink onClick={() => scrollToSection('projects')}>Projects</NavLink>
         <NavLink onClick={() => scrollToSection('contact')}>Contact</NavLink>
       </div>

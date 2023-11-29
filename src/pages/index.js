@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import Navbar from '@/components/Navbar';
 import TechStack from '@/components/Techstack';
 import CoffeeSnobsProject from '@/components/Projects';
+import Contact from '@/components/Contact';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -22,7 +23,6 @@ const Container = styled.div`
   align-items: center;
   min-height: 100vh; /* Use vh for full viewport height */
   position: relative;
-  // background-color: white; /* White background for the content container */
   width: 90%;
   margin: 0 auto; /* Center the section horizontally */
   padding: 70px; /* Add padding */
@@ -37,10 +37,11 @@ const Content = styled.div`
   text-align: center; /* Center text inside Content */
   max-width: 600px;
   width: 100%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9); /* Adjust the alpha value (0 to 1) for desired transparency */
   z-index: 1;
   margin-top: 0px;
 `;
+
 
 const Welcome = styled.h1`
   font-size: 40px;
@@ -218,7 +219,7 @@ export default function Home() {
       <Container id="home">
         <Content> 
           <Welcome>WELCOME</Welcome>
-          <Name> I'm Inbar </Name>
+          <Name> I'm Inbar Gluska </Name>
           <Header> a Full-Stack Web Developer</Header>
        </Content>
       </Container> 
@@ -253,10 +254,7 @@ export default function Home() {
       <Container id="contact">
         <Content>
           <Header>Contact Me</Header>
-          <ContactInfo>
-            {/* Contact Info content */}
-          </ContactInfo>
-          {/* Other content */}
+         <Contact />
         </Content>
       </Container>
     </main>
