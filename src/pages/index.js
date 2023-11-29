@@ -4,6 +4,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import * as THREE from 'three';
 import Navbar from '@/components/Navbar';
 import TechStack from '@/components/Techstack';
+import CoffeeSnobsProject from '@/components/Projects';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -243,11 +244,10 @@ export default function Home() {
       </Container>
        <Container id="projects">
         <Content>
-          <Header>Projects</Header>
-          <ProjectLink href="https://coffee-snobs-coral.vercel.app/" target="_blank">
-            Check out my recent project
-          </ProjectLink>
-          {/* Other content */}
+          <Header>
+          Check out my recent project
+          </Header>
+          <CoffeeSnobsProject/>
         </Content>
       </Container>
       <Container id="contact">
