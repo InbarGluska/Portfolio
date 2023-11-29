@@ -3,6 +3,7 @@ import Head from 'next/head';
 import styled, { createGlobalStyle } from 'styled-components';
 import * as THREE from 'three';
 import Navbar from '@/components/Navbar';
+import TechStack from '@/components/Techstack';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -63,13 +64,6 @@ const Paragraph = styled.p`
   line-height: 1.6;
   margin-bottom: 0px;
   display: block;
-`;
-
-const TechStack = styled.div`
-  font-size: 16px;
-  margin-top: 20px;
-  font-weight: bold;
-  color: #333; /* Darker text color for readability */
 `;
 
 const ContactInfo = styled.div`
@@ -223,7 +217,7 @@ export default function Home() {
       <Container id="home">
         <Content> 
           <Welcome>WELCOME</Welcome>
-          <Name> I'm Inbar Gluska</Name>
+          <Name> I'm Inbar </Name>
           <Header> a Full-Stack Web Developer</Header>
        </Content>
       </Container> 
@@ -231,30 +225,20 @@ export default function Home() {
         <Content>
           <Header>About Me</Header>
           <Paragraph>
-Greetings! I'm a dedicated Full Stack Web Developer with a solid foundation in web development, coupled with a thirst for learning and innovation.
+          Greetings! I'm a dedicated Full Stack Web Developer with a solid foundation in web development, coupled with a thirst for learning and innovation.
           </Paragraph>
           <Paragraph>
-
-
-🎓
-I graduated from a rigorous and comprehensive web development bootcamp at Spiced in August 2023. This immersive experience equipped me with extensive knowledge and hands-on expertise in various aspects of web development.
-</Paragraph>
-<Paragraph>
-
-💼 
-Currently, I'm engaged in an internship at MewMeow, contributing to their innovative Cats App. Here, I'm fully immersed in full-stack development, specializing in React Native and iOS simulator. Additionally, I've been actively exploring 3D concepts utilizing Three.js.
-
+          🎓 I graduated from a rigorous and comprehensive web development bootcamp at Spiced in August 2023. This immersive experience equipped me with extensive knowledge and hands-on expertise in various aspects of web development.
           </Paragraph>
-          {/* Other content */}
+          <Paragraph>
+          💼 Currently, I'm engaged in an internship at MewMeow, contributing to their innovative Cats App. Here, I'm fully immersed in full-stack development, specializing in React Native and iOS simulator. Additionally, I've been actively exploring 3D concepts utilizing Three.js.
+          </Paragraph>
         </Content>
       </Container>
       <Container id="tech-stack">
         <Content>
           <Header>Tech Stack</Header>
-          <TechStack>
-            {/* Tech Stack content */}
-          </TechStack>
-          {/* Other content */}
+<TechStack />
         </Content>
       </Container>
        <Container id="projects">
