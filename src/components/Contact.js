@@ -7,7 +7,7 @@ const Contact = () => {
 
   return (
     <>
-      <div style={{ display: 'flex', gap: '15px' }}>
+      <div style={{ display: 'flex', gap: '15px', marginTop: '30px' }}>
         <a href={email}>
           <img
             src="https://img.shields.io/badge/Email-Contact_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white"
