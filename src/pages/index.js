@@ -23,11 +23,12 @@ const Container = styled.div`
   align-items: center;
   min-height: 100vh; /* Use vh for full viewport height */
   position: relative;
-  width: 90%;
+  width: 80%;
   margin: 0 auto; /* Center the section horizontally */
   padding: 70px; /* Add padding */
   margin-top: -55px;
   margin-bottom: -100px;
+  margin-left: -10px;
 `;
 
 const Content = styled.div`
@@ -227,13 +228,16 @@ export default function Home() {
         <Content>
           <Header>About Me</Header>
           <Paragraph>
-          Greetings! I'm a dedicated Full Stack Web Developer with a solid foundation in web development, coupled with a thirst for learning and innovation.
+          I'm a dedicated Full Stack Web Developer with a foundation in React.js that I use as a base to learn new technologies and approaches.
           </Paragraph>
           <Paragraph>
-          🎓 I graduated from a rigorous and comprehensive web development bootcamp at Spiced in August 2023. This immersive experience equipped me with extensive knowledge and hands-on expertise in various aspects of web development.
+          🎓 I graduated from a comprehensive web development bootcamp at Spiced Academy in Berlin, August 2023. Before that I finished a Bachelor's Degree in Political Science from Tel Aviv University (2021) and a Yoga Teacher course.
           </Paragraph>
           <Paragraph>
-          💼 Currently, I'm engaged in an internship at MewMeow, contributing to their innovative Cats App. Here, I'm fully immersed in full-stack development, specializing in React Native and iOS simulator. Additionally, I've been actively exploring 3D concepts utilizing Three.js.
+          💼 Currently, I'm engaged in a web development internship at MewMeow, contributing to their innovative Cats App. Here, I've been introduced the wonderful world of mobile apps with React Native and Firebase backend services. Additionally, as you can see on this page, I've been playing around with 3D shapes using Three.js.
+          </Paragraph>
+          <Paragraph>
+          ☕ I love coffee. A lot.
           </Paragraph>
         </Content>
       </Container>

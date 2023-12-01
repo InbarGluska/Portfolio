@@ -5,9 +5,11 @@ const CoffeeSnobsProject = () => {
 
   return (
     <>
-      <p>
-        I've curated the ultimate guide to Berlin's top-notch coffee spots in my Coffee Snobs website.
-        Explore and discover the best places to indulge in exquisite coffee flavors.
+      <p style={{ fontSize: '20px', marginBottom: '10px' }}>
+        Because I'm such a coffee snob, I've curated the ultimate guide to Berlin's top-notch coffee spots in my Coffee Snobs website.
+      </p>
+      <p style={{ fontSize: '20px', marginBottom: '10px' }}>
+        Check it out if you want to indulge in some fine coffee.
       </p>
       <a href={coffeeSnobsLink} target="_blank" rel="noopener noreferrer">
         <img
@@ -22,3 +24,5 @@ const CoffeeSnobsProject = () => {
 };
 
 export default CoffeeSnobsProject;
+
+
