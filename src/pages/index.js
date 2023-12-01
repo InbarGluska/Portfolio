@@ -8,7 +8,6 @@ import CoffeeSnobsProject from '@/components/Projects';
 import Contact from '@/components/Contact';
 
 const GlobalStyle = createGlobalStyle`
-@media (max-width: 768px)
   body {
     margin: 0;
     font-family: "Montserrat", sans-serif;
