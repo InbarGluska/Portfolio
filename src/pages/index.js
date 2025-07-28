@@ -247,14 +247,6 @@ export default function Home() {
 <TechStack />
         </Content>
       </Container>
-       <Container id="projects">
-        <Content>
-          <Header>
-          Check out my recent project
-          </Header>
-          <CoffeeSnobsProject/>
-        </Content>
-      </Container>
       <Container id="contact">
         <Content>
           <Header>Contact Me</Header>
