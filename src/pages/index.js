@@ -234,7 +234,7 @@ export default function Home() {
           🎓 I graduated from a comprehensive web development bootcamp at Spiced Academy in Berlin, August 2023. Before that I finished a Bachelor's Degree in Political Science from Tel Aviv University (2021) and a Yoga Teacher course.
           </Paragraph>
           <Paragraph>
-          💼 Currently, I'm engaged in a web development internship at MewMeow, contributing to their innovative Cats App. Here, I've been introduced the wonderful world of mobile apps with React Native and Firebase backend services. Additionally, as you can see on this page, I've been playing around with 3D shapes using Three.js.
+          💼 Currently, I work as a freelance Full Stack Web Developer at MieterEngel, building production-ready features with React, TypeScript, SCSS and PostgreSQL. In addition, I completed a data engineering internship focused on SQL-based data pipelines and analytics. With hands-on experience across both frontend development and data infrastructure, I'm eager to keep growing and contributing to meaningful tech projects.
           </Paragraph>
           <Paragraph>
           ☕ I love coffee. A lot.
