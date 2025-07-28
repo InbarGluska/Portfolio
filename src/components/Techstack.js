@@ -12,14 +12,15 @@ const TechStack = () => {
         <TechBadge badgeURL="https://img.shields.io/badge/REST_APIs-000000?style=for-the-badge&logo=rest&logoColor=white" />
         <TechBadge badgeURL="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" />
         <TechBadge badgeURL="https://img.shields.io/badge/Agile-00968F?style=for-the-badge&logo=agile&logoColor=white" />
-        <TechBadge badgeURL="https://img.shields.io/badge/React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
         <TechBadge badgeURL="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" />
         <TechBadge badgeURL="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
-        <TechBadge badgeURL="https://img.shields.io/badge/Xcode-147EFB?style=for-the-badge&logo=xcode&logoColor=white" />
         <TechBadge badgeURL="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
         <TechBadge badgeURL="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
-        <TechBadge badgeURL="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
-      </div>
+        <TechBadge badgeURL="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
+        <TechBadge badgeURL="https://img.shields.io/badge/BigQuery-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" />
+        <TechBadge badgeURL="https://img.shields.io/badge/Bitbucket-0052CC?style=for-the-badge&logo=bitbucket&logoColor=white" />
+        <TechBadge badgeURL="https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white" />
+    </div>
     </>
   );
 };
