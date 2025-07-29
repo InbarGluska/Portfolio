@@ -11,6 +11,7 @@ const TechStack = () => {
         <TechBadge badgeURL="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />
         <TechBadge badgeURL="https://img.shields.io/badge/REST_APIs-000000?style=for-the-badge&logo=rest&logoColor=white" />
         <TechBadge badgeURL="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" />
+        <TechBadge badgeURL="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" />
         <TechBadge badgeURL="https://img.shields.io/badge/Agile-00968F?style=for-the-badge&logo=agile&logoColor=white" />
         <TechBadge badgeURL="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" />
         <TechBadge badgeURL="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
